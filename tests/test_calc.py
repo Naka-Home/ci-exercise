@@ -13,3 +13,4 @@ class TestTarget(unittest.TestCase):
     def test_fact_negative(self):
         with self.assertRaises(ValueError):
             fact(-1)
+
