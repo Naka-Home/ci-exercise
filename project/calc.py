@@ -8,13 +8,15 @@ def fact(n):
 
 
 def gcd(a, b):
-    if a and b == 0:
-        return 0
-    elif a == 0:
+    if a == 0:
         return abs(b)
     elif b == 0:
         return abs(a)
-    else:
-        while b != 0:
-            a, b = b, a % b
-        return a
+    elif a < 0 or b < 0:
+        a = abs(a)
+        b = abs(b)
+    
+    while b != 0:
+        a, b = b, a % b
+    return a
+ 
